@@ -138,4 +138,4 @@ setTimeout(() => {
   loaderCtr.addEventListener('transitionend',() => {
     loaderCtr.style.display = 'none'    
   })
-}, 5000);
+}, 6200);
