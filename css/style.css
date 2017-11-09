@@ -27,7 +27,7 @@ li{list-style:none}
 html,body{ 
 	width:100%;
 	height:100%;
-	background:#202020;
+	background:#000000;
 }
 
 html{
@@ -49,10 +49,73 @@ canvas{
 #particles-js{
   width: 100%;
   height: 100%;
-  background-color: #202020;
+  background-color: #000000;
   background-image: url('');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   clip-path: polygon(35% 0.1%, 25% 0.1%, 44% 50%, 25% 99.9%, 35% 99.9%, 49.5% 63%, 64% 99.9%, 75% 99.9%, 55% 50%, 75% 0.1%, 64% 0.1%, 49.5% 37%);    
+}
+
+body{
+  position: relative;
+}
+.loader-ctr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  background: black;
+  overflow: hidden;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  -webkit-transition: all 1s ;
+  -moz-transition: all 1s ;
+  transition: all 1s ;
+}
+
+.loader {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  border: 8px solid black;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  background-color: red;
+}
+
+.loader:before {
+  animation: animate 5s infinite ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.loader:after {
+  animation: animate2 5s infinite ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: rotate(180deg) skew(360deg);
+  }
+}
+
+@keyframes animate2 {
+  100% {
+    transform: rotate(-180deg) skew(-360deg);
+  }
 }

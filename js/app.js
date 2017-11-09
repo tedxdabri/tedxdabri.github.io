@@ -131,3 +131,11 @@ particlesJS('particles-js',
   }
 
 );
+
+const loaderCtr = document.querySelector('.loader-ctr');
+setTimeout(() => {  
+  loaderCtr.style.opacity = '0'
+  loaderCtr.addEventListener('transitionend',() => {
+    loaderCtr.style.display = 'none'    
+  })
+}, 6200);
